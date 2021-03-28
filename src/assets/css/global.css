@@ -1,0 +1,23 @@
+html,
+body,
+#app {
+    min-width: 1080px;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* input 标签的背景颜色*/
+.top-left .el-input__inner {
+    background-color: #e13e3e;
+    border: 0;
+    outline: none;
+  }
+/* .el-popover img {
+    width: 200px;
+} */
