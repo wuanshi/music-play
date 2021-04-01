@@ -1,6 +1,6 @@
 <template>
   <div>
-      
+      <h2>LocalMusic</h2>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style>
 
-</style>>
-
+</style>

@@ -1,8 +1,15 @@
 html,
 body,
-#app {
+#app,
+.homePage,
+.el-container
+ {
     min-width: 1080px;
+    min-height: 700px;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 * {
     margin: 0;

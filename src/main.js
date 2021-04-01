@@ -9,12 +9,13 @@ import './assets/css/global.css'
 
 
 // 配置请求根路径
-// axios.defaults.baseURL = '/api'
-axios.defaults.baseURL = 'http://localhost:3000/'
+axios.defaults.baseURL = '/api'
+// axios.defaults.baseURL = 'http://localhost:3000/'
 // Vue.prototype.HOST = '/api'
 //允许跨域携带cookie信息
 axios.defaults.withCredentials = true
-// 
+
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 // axios.defaults.headers.post['Content-Type'] = 'text/plain;charset=UTF-8';
 // 通过axios请求拦截器添加token 保证拥有获取数据的权限
 axios.interceptors.request.use(config => {
