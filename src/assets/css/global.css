@@ -2,19 +2,20 @@ html,
 body,
 #app,
 .homePage,
-.el-container
- {
-    min-width: 1080px;
-    min-height: 700px;
+.el-container {
+    min-width : 1080px;
+    min-height: 600px;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+    padding   : 0;
+    margin    : 0;
+    height    : 100%;
 }
+
 * {
-    margin: 0;
+    margin : 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -22,9 +23,14 @@ a {
 /* input 标签的背景颜色*/
 .top-left .el-input__inner {
     background-color: #e13e3e;
-    border: 0;
-    outline: none;
-  }
+    border          : 0;
+    outline         : none;
+}
+
+li {
+    list-style: none;
+}
+
 /* .el-popover img {
     width: 200px;
 } */

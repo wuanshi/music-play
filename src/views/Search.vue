@@ -1,18 +1,20 @@
 <template>
   <div>
+    <!-- 头部导航栏 -->
     <el-menu
-      :default-active="activeIndex"
+      default-active="recommend"
       class="el-menu-demo"
       mode="horizontal"
       height="30px"
-      @select="handleSelect"
       router
     >
       <el-menu-item v-for="item in list" :key="item.path" :index="item.path">{{
         item.content
       }}</el-menu-item>
     </el-menu>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -22,33 +24,46 @@ export default {
     return {
       list: [
         {
-          path: "/recommend",
+          path: "/search/recommend",
           content: "个性推荐",
         },
         {
-          path: "/song",
+          path: "/search/song",
           content: "歌单",
         },
         {
-          path: "/radio",
+          path: "/search/radio",
           content: "主播电台",
         },
         {
-          path: "/rank",
+          path: "/search/rank",
           content: "排行榜",
         },
       ],
+      path:''
     };
   },
   created() {
     this.getList();
   },
+  // 保持跳转路由之前的状态
+  activated() {
+    this.$router.push(this.path);
+    // console.log("activated");
+  },
+  // beforeRouteEnd(to,from,next){
+    
+  //   next()
+  // },
+  beforeRouteLeave(to, from, next) {
+    // console.log(this.$route.path);
+    this.path = this.$route.path;
+    next();
+  },
+
   methods: {
     // 首页信息
-    async getList() {
-      // const res = await this.$http.get('/homepage/block/page')
-      // console.log(res);
-    },
+    async getList() {},
   },
 };
 </script>
